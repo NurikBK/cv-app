@@ -60,12 +60,12 @@ table {
 
   * {
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
   }
   
   body {
     background-color: #FFF;
 		color: #222935;
+    font-family: 'Open Sans', sans-serif;
   }
 `;
 
