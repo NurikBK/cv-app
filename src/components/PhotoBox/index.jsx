@@ -2,9 +2,15 @@ import React from 'react';
 import avatarImg from '../../assets/avatar.jpg';
 import { StyledPhotoBox } from '../styles/PhotoBox.styled';
 
-const PhotoBox = ({ name = null, sub = null, text = null }) => {
+const PhotoBox = ({
+  width,
+  fontSize,
+  name = null,
+  sub = null,
+  text = null,
+}) => {
   return (
-    <StyledPhotoBox width="163px">
+    <StyledPhotoBox width={width} fontSize={fontSize}>
       <img src={avatarImg} alt="avatar" />
       {name && (
         <div>
