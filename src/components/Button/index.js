@@ -5,7 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Button = ({ text, icon = null }) => {
   return (
     <StyledButton>
-      {icon && <FontAwesomeIcon icon={icon} />}
+      {icon && (
+        <i>
+          <FontAwesomeIcon icon={icon} />
+        </i>
+      )}
       {text}
     </StyledButton>
   );

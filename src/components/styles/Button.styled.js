@@ -10,8 +10,11 @@ export const StyledButton = styled.button`
   padding: 0.625em 1.25em;
   position: relative;
   z-index: 2000;
-
+  i {
+    margin-right: 0.8em;
+    color: ${({ theme }) => theme.colors.secondary};
+  }
   &:hover {
-    background: #26c17e;
+    background: ${({ theme }) => theme.colors.accent};
   }
 `;
