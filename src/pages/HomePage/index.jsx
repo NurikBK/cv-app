@@ -7,7 +7,12 @@ import PhotoBox from '../../components/PhotoBox';
 const HomePage = () => {
   return (
     <StyledHomePage>
-      <PhotoBox />
+      <PhotoBox
+        name="Nurzhan Bizhan"
+        sub="Programmer. Creative. Innovator"
+        text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis natoque"
+      />
       <Link to="/inner">
         <Button text="Know more" />
       </Link>
