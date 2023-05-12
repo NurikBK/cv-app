@@ -19,7 +19,7 @@ export const StyledPhotoBox = styled.div`
   }
 
   h1 {
-    font-size: 2.8125rem;
+    font-size: ${({ fontSize }) => fontSize};
     font-weight: 700;
     margin-bottom: 0.6em;
   }
