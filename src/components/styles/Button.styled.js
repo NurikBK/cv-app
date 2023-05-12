@@ -8,6 +8,8 @@ export const StyledButton = styled.button`
   font-weight: 400;
   font-size: 1rem;
   padding: 0.625em 1.25em;
+  position: relative;
+  z-index: 2000;
 
   &:hover {
     background: #26c17e;
