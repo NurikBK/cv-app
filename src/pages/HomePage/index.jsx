@@ -8,6 +8,8 @@ const HomePage = () => {
   return (
     <StyledHomePage>
       <PhotoBox
+        width="163px"
+        fontSize="2.8125rem"
         name="Nurzhan Bizhan"
         sub="Programmer. Creative. Innovator"
         text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
