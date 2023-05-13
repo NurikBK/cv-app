@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledAddress } from '../styles/Address.styled';
-import { contacts } from '../../utils/contactsArr';
+import { contacts } from '../../constants/contactsArr';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Address = () => {
