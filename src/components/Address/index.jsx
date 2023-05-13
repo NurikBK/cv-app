@@ -1,48 +1,23 @@
 import React from 'react';
 import { StyledAddress } from '../styles/Address.styled';
+import { contacts } from '../../utils/contactsArr';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Address = () => {
   return (
     <StyledAddress className="address">
-      <dl>
-        <dt></dt>
-        <dd>
-          <a href="tel:+500 342 242">500 342 242</a>
-        </dd>
-      </dl>
-      <dl>
-        <dt></dt>
-        <dd>
-          <a href="mailto:office@kamsolutions.pl">office@kamsolutions.pl</a>
-        </dd>
-      </dl>
-      <dl>
-        <dt></dt>
-        <dd>
-          <strong>Twitter</strong>
-          <br />{' '}
-          <a href="https://twitter.com/wordpress">
-            https://twitter.com/wordpress
-          </a>
-        </dd>
-      </dl>
-      <dl>
-        <dt></dt>
-        <dd>
-          <strong>Facebook</strong>
-          <br />{' '}
-          <a href="https://www.facebook.com/facebook">
-            https://www.facebook.com/facebook
-          </a>
-        </dd>
-      </dl>
-      <dl>
-        <dt></dt>
-        <dd>
-          <strong>Skype</strong>
-          <br /> <a href="skype:kamsolutions.pl">kamsolutions.pl</a>
-        </dd>
-      </dl>
+      {contacts.map((contact, index) => (
+        <div className="wrapper" key={index}>
+          <i>
+            <FontAwesomeIcon icon={contact.icon} />
+          </i>
+          <div className="info">
+            <a href={contact.link}>{contact.title}</a>
+            <br />
+            {contact.info && <small>{contact.info}</small>}
+          </div>
+        </div>
+      ))}
     </StyledAddress>
   );
 };
