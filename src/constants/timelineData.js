@@ -1,12 +1,12 @@
 export const timelineData = [
   {
-    date: 2001,
-    title: 'Title 0',
-    text: 'Elit voluptate ad nostrud laboris. Elit incididunt mollit enim enim id id laboris dolore et et mollit. Mollit adipisicing ullamco exercitation ullamco proident aute enim nisi. Dolore eu fugiat consectetur nulla sunt Lorem ex ad. Anim eiusmod do tempor fugiat minim do aliqua amet ex dolore velit.\r\n',
+    date: '2011',
+    title: 'Dalian University Of Foreign Languages',
+    text: `Dalian University of Foreign Languages (DLUFL; simplified Chinese: 大连外国语大学; traditional Chinese: 大連外國語大学; pinyin: Dàlián wàiguóyǔ dàxué) is a public university in Dalian, Liaoning, China and one of the top foreign language institutes in China. Formerly known as Dalian School of Japanese Language, DLUFL was founded in 1964 with the help of the late Chinese Premier Zhou Enlai. It is now under the administration of the Education Commission of Liaoning Province. Through 40 years of development, DLUFL has fledged into a multi-disciplinary foreign language university which also offers programs in other fields like arts, economics, management, engineering and law.`,
   },
   {
-    date: 2000,
-    title: 'Title 1',
+    date: '2023',
+    title: 'EPAM',
     text: 'Et irure culpa ad proident labore excepteur elit dolore. Quis commodo elit culpa eiusmod dolor proident non commodo excepteur aute duis duis eu fugiat. Eu duis occaecat nulla eiusmod non esse cillum est aute elit amet cillum commodo.\r\n',
   },
   {

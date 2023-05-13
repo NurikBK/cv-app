@@ -8,32 +8,32 @@ import {
 export const contacts = [
   {
     icon: faPhone,
-    title: '500 342 242',
+    title: '+7 708 693 23 41',
     info: '',
-    link: 'tel:+500 342 242',
+    link: 'tel:+7 708 693 23 41',
   },
   {
     icon: faEnvelope,
-    title: 'office@kamsolutions.pl',
+    title: 'bizhannk@gmail.com',
     info: '',
-    link: 'mailto:office@kamsolutions.pl',
+    link: 'mailto:bizhannk@gmail.com',
   },
   {
     icon: faTwitter,
     title: 'Twitter',
-    info: 'www.twitter.com/wordpress',
+    info: '@Nurik',
     link: 'https://twitter.com/wordpress',
   },
   {
     icon: faFacebookF,
     title: 'Facebook',
-    info: 'www.facebook.com/facebook',
+    info: 'Nurzhan Bizhan',
     link: 'https://www.facebook.com/facebook',
   },
   {
     icon: faSkype,
     title: 'Skype',
-    info: 'kamsolutions.pl',
-    link: 'skype:kamsolutions.pl',
+    info: 'Nurik',
+    link: 'skype:nurik',
   },
 ];
