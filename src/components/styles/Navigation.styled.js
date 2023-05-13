@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledNavigation = styled.nav`
+export const StyledNavigation = styled.aside`
   background-color: ${({ theme }) => theme.colors.darkBg};
   position: relative;
   display: flex;
@@ -57,7 +57,7 @@ export const StyledNavigation = styled.nav`
   .menu {
     cursor: pointer;
     position: absolute;
-    right: -30px;
+    right: ${({ width }) => (width === '54px' ? '-30px' : '-50px')};
     top: -85px;
     background-color: #222935;
     color: #fff;
