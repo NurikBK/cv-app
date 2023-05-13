@@ -2,15 +2,18 @@ import styled from 'styled-components';
 
 export const StyledNavigation = styled.nav`
   background-color: ${({ theme }) => theme.colors.darkBg};
-  width: 300px;
-  height: 2000px;
-  padding: 1.3em;
+  height: 3000px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .sticky {
     top: 20px;
     position: sticky;
     height: fit-content;
+    width: 250px;
+    padding: 1.3em;
   }
 
   li {
