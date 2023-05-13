@@ -1,34 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Button from '../Button';
-import PhotoBox from '../PhotoBox';
-import { navlinks } from '../../utils/navlinks_constants.js';
+import React, { useState } from 'react';
+import DesktopNavigation from './DesktopNavigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import MobileNavigation from './MobileNavigation';
 import { StyledNavigation } from '../styles/Navigation.styled';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const Navigation = () => {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const isMobile = useMediaQuery('(max-width:600px)');
+
   return (
-    <StyledNavigation>
-      <div className="sticky">
-        <PhotoBox width="100px" fontSize="1rem" name="Nurzhan Bizhan" />
-        <ul>
-          {navlinks.map((link) => (
-            <li key={link.id}>
-              <i>
-                <FontAwesomeIcon icon={link.icon} />
-              </i>
-              <a href={link.id}>{link.title}</a>
-            </li>
-          ))}
-        </ul>
-        <Link to="/">
-          <Button icon={faChevronLeft} text="Go Back" />
-        </Link>
-      </div>
-      <button className="menu">
-        <FontAwesomeIcon icon={faBars} />
-      </button>
+    <StyledNavigation width={isCollapsed ? '54px' : '250px'}>
+      {isCollapsed || isMobile ? <MobileNavigation /> : <DesktopNavigation />}
+      {!isMobile && (
+        <button
+          className="menu"
+          onClick={() => setIsCollapsed((prevState) => !prevState)}
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+      )}
     </StyledNavigation>
   );
 };
