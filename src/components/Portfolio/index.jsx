@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyledPortfolio } from '../styles/Portfolio.styled';
+import project1Img from '../../assets/project1.png';
 
 const Portfolio = () => {
   return (
@@ -23,15 +24,17 @@ const Portfolio = () => {
           className="filter-item ui"
           style={{ position: 'absolute', left: '40px', top: '0' }}
         >
-          <img src="static/media/card_1.b1844ee5.jpg" alt="card" />
+          <img src={project1Img} alt="Space travel site" />
           <div className="portfolio-info">
-            <h2>Some text</h2>
-            <p>
-              Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-              arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-              justo. Nullam dictum felis eu pede mollis{' '}
-            </p>
-            <a href="https://somesite.com">View source</a>
+            <h2>Space Travel</h2>
+            <p>In this project I used HTML, CSS and JS</p>
+            <a
+              href="https://nurikbk.github.io/space-travel-site/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View source
+            </a>
           </div>
         </li>
         <li
@@ -46,7 +49,9 @@ const Portfolio = () => {
               arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
               justo. Nullam dictum felis eu pede mollis{' '}
             </p>
-            <a href="https://somesite.com">View source</a>
+            <a href="https://somesite.com" target="_blank" rel="noreferrer">
+              View source
+            </a>
           </div>
         </li>
         <li
@@ -61,7 +66,9 @@ const Portfolio = () => {
               arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
               justo. Nullam dictum felis eu pede mollis{' '}
             </p>
-            <a href="https://somesite.com">View source</a>
+            <a href="https://somesite.com" target="_blank" rel="noreferrer">
+              View source
+            </a>
           </div>
         </li>
         <li
@@ -76,7 +83,9 @@ const Portfolio = () => {
               arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
               justo. Nullam dictum felis eu pede mollis{' '}
             </p>
-            <a href="https://somesite.com">View source</a>
+            <a href="https://somesite.com" target="_blank" rel="noreferrer">
+              View source
+            </a>
           </div>
         </li>
       </ul>

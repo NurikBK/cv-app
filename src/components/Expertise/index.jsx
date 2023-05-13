@@ -1,36 +1,22 @@
 import React from 'react';
 import { StyledExpertise } from '../styles/Expertise.styled';
 
-const Expertise = () => {
+const Expertise = ({ data }) => {
   return (
     <StyledExpertise>
       <ul className="expertise-list">
-        <li>
-          <div className="expertise-list-date">
-            <h3>Google</h3>
-            <span className="date">2013-2014</span>
-          </div>
-          <div className="expertise-list-info">
-            <h3>Front-end developer / php programmer</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor
-            </p>
-          </div>
-        </li>
-        <li>
-          <div className="expertise-list-date">
-            <h3>Twitter</h3>
-            <span className="date">2012</span>
-          </div>
-          <div className="expertise-list-info">
-            <h3>Web developer</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor
-            </p>
-          </div>
-        </li>
+        {data.map((item, index) => (
+          <li key={index}>
+            <div className="expertise-list-date">
+              <h3>{item.info.company}</h3>
+              <span className="date">{item.date}</span>
+            </div>
+            <div className="expertise-list-info">
+              <h3>{item.info.job}</h3>
+              <p>{item.info.description}</p>
+            </div>
+          </li>
+        ))}
       </ul>
     </StyledExpertise>
   );
