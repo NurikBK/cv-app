@@ -16,7 +16,7 @@ const HomePage = () => {
             commodo ligula eget dolor. Aenean massa. Cum sociis natoque"
       />
       <Link to="/inner">
-        <Button text="Know more" />
+        <Button text="Know more" padding="0.625em 1.25em" />
       </Link>
     </StyledHomePage>
   );
