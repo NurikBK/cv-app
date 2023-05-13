@@ -14,7 +14,7 @@ export const Container = styled.div`
     position: fixed;
     bottom: 0;
     right: 30px;
-    background-color: ${({ theme }) => theme.colors.darkBg};
+    background-color: ${({ theme }) => theme.colors.main};
     color: ${({ theme }) => theme.colors.secondary};
     padding: 1em 1em 0;
     border: none;

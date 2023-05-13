@@ -8,32 +8,28 @@ export const StyledPortfolio = styled.div`
   .tabs {
     font-size: 16px;
     margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
   }
-  .tabs li {
-    display: inline-block;
-    padding: 0 0 0 10px;
-    margin: 0 5px 0 0;
-    position: relative;
-    text-transform: capitalize;
-  }
-  .tabs li span {
+
+  button {
+    background-color: ${({ theme }) => theme.colors.main};
+    color: ${({ theme }) => theme.colors.secondary};
+    font-family: 'Open-sans', sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
     cursor: pointer;
   }
-  .tabs li.active span {
-    color: #26c17e;
+
+  button:active {
+    scale: 0.98;
   }
-  .tabs li:first-child {
-    padding: 0;
+
+  .tabs button.active span {
+    color: ${({ theme }) => theme.colors.accent};
   }
-  .tabs li:first-child:after {
-    display: none;
-  }
-  .tabs li:after {
-    content: '/';
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+
   .filter-container {
     overflow: hidden;
     position: relative;

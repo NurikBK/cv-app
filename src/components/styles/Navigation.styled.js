@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledNavigation = styled.aside`
-  background-color: ${({ theme }) => theme.colors.darkBg};
+  background-color: ${({ theme }) => theme.colors.main};
   position: relative;
   display: flex;
   flex-direction: column;
