@@ -7,11 +7,11 @@ export const StyledButton = styled.button`
   color: #fff;
   font-weight: 400;
   font-size: 1rem;
-  padding: 0.625em 1.25em;
+  padding: ${({ padding }) => padding};
+  cursor: pointer;
   position: relative;
   z-index: 2000;
   i {
-    margin-right: 0.8em;
     color: ${({ theme }) => theme.colors.secondary} !important;
   }
   &:hover {

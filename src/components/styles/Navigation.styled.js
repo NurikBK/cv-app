@@ -2,18 +2,29 @@ import styled from 'styled-components';
 
 export const StyledNavigation = styled.nav`
   background-color: ${({ theme }) => theme.colors.darkBg};
-  height: 3000px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1.3em;
+  transition: width 0.1s ease-in-out;
+  width: ${({ width }) => width};
+  flex: 1;
+  img {
+    margin-bottom: ${({ width }) => (width === '54px' ? '7.9em' : 0)};
+  }
 
   .sticky {
     top: 20px;
     position: sticky;
     height: fit-content;
-    width: 250px;
-    padding: 1.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    margin-top: 8em;
   }
 
   li {
@@ -26,12 +37,11 @@ export const StyledNavigation = styled.nav`
 
   li:hover a,
   li:hover i,
-  li.active {
+  a.active {
     color: ${({ theme }) => theme.colors.accent};
   }
 
   i {
-    font-size: 1rem;
     width: 14px;
   }
 
@@ -45,9 +55,10 @@ export const StyledNavigation = styled.nav`
   }
 
   .menu {
+    cursor: pointer;
     position: absolute;
     right: -30px;
-    top: 20px;
+    top: -85px;
     background-color: #222935;
     color: #fff;
     border: none;

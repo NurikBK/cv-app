@@ -12,10 +12,12 @@ export const StyledPhotoBox = styled.div`
   gap: 10px;
 
   img {
+    transition: width 0.1s ease-in-out;
     width: ${({ width }) => width};
     aspect-ratio: 1;
     border-radius: 100%;
     object-fit: cover;
+    border: 2px solid #fff;
   }
 
   h1 {
