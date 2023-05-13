@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import InnerPage from './pages/InnerPage';
 import { ThemeProvider } from 'styled-components';
-import { theme } from './utils/theme';
+import { theme } from './constants/theme';
 
 function App() {
   return (
