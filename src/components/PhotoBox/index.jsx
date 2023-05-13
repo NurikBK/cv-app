@@ -1,8 +1,8 @@
 import React from 'react';
-import avatarImg from '../../assets/avatar.jpg';
 import { StyledPhotoBox } from '../styles/PhotoBox.styled';
 
 const PhotoBox = ({
+  avatar,
   width,
   fontSize,
   name = null,
@@ -10,8 +10,8 @@ const PhotoBox = ({
   text = null,
 }) => {
   return (
-    <StyledPhotoBox width={width} fontSize={fontSize}>
-      <img src={avatarImg} alt="avatar" />
+    <StyledPhotoBox  width={width} fontSize={fontSize}>
+      <img src={avatar} alt="avatar" />
       {name && (
         <div>
           <h1>{name}</h1>
