@@ -9,19 +9,21 @@ import PhotoBox from '../PhotoBox';
 import avatarImg from '../../assets/avatar.jpg';
 
 const Navigation = () => {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const isMobile = useMediaQuery('(max-width:600px)');
 
+  const isDesktop = isCollapsed || isMobile;
+
   return (
-    <StyledNavigation width={isCollapsed || isMobile ? '54px' : '250px'}>
+    <StyledNavigation width={isDesktop ? '54px' : '250px'}>
       <div className="sticky">
         <PhotoBox
           avatar={avatarImg}
-          width={isCollapsed || isMobile ? '40px' : '100px'}
-          name={isCollapsed || isMobile ? '' : 'Nurzhan Bizhan'}
+          width={isDesktop ? '40px' : '100px'}
+          name={isDesktop ? '' : 'Nurzhan Bizhan'}
           fontSize="1rem"
         />
-        {isCollapsed || isMobile ? <MobileNavigation /> : <DesktopNavigation />}
+        {isDesktop ? <MobileNavigation /> : <DesktopNavigation />}
         {!isMobile && (
           <button
             className="menu"

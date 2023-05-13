@@ -8,6 +8,7 @@ const Portfolio = () => {
   const isotope = useRef();
   // store the filter keyword in a state
   const [filterKey, setFilterKey] = useState('*');
+  const [activeButton, setActiveButton] = useState('*');
 
   // initialize an Isotope object with configs
   useEffect(() => {
@@ -26,17 +27,29 @@ const Portfolio = () => {
       : isotope.current.arrange({ filter: `.${filterKey}` });
   }, [filterKey]);
 
-  const handleFilterKeyChange = (key) => () => setFilterKey(key);
+  const handleChange = (key) => () => {
+    setActiveButton(key);
+    setFilterKey(key);
+  };
   return (
     <StyledPortfolio>
       <div className="tabs">
-        <button className="active" onClick={handleFilterKeyChange('*')}>
+        <button
+          className={activeButton === '*' ? 'active' : ''}
+          onClick={handleChange('*')}
+        >
           All
         </button>
-        <button className="" onClick={handleFilterKeyChange('ui')}>
+        <button
+          className={activeButton === 'ui' ? 'active' : ''}
+          onClick={handleChange('ui')}
+        >
           UI
         </button>
-        <button className="active" onClick={handleFilterKeyChange('code')}>
+        <button
+          className={activeButton === 'code' ? 'active' : ''}
+          onClick={handleChange('code')}
+        >
           Code
         </button>
       </div>
