@@ -37,7 +37,7 @@ export const StyledNavigation = styled.aside`
 
   li:hover a,
   li:hover i,
-  a.active {
+  li.active {
     color: ${({ theme }) => theme.colors.accent};
   }
 

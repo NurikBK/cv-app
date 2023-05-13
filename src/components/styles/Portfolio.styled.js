@@ -22,6 +22,10 @@ export const StyledPortfolio = styled.div`
     cursor: pointer;
   }
 
+  button.active {
+    color: ${({ theme }) => theme.colors.accent};
+  }
+
   button:active {
     scale: 0.98;
   }
