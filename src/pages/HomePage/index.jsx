@@ -3,11 +3,13 @@ import { StyledHomePage } from '../../components/styles/HomePage.styled';
 import { Link } from 'react-router-dom';
 import Button from '../../components/Button';
 import PhotoBox from '../../components/PhotoBox';
+import avatarImg from '../../assets/avatar.jpg';
 
 const HomePage = () => {
   return (
     <StyledHomePage>
       <PhotoBox
+        avatar={avatarImg}
         width="163px"
         fontSize="2.8125rem"
         name="Nurzhan Bizhan"
