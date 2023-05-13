@@ -34,22 +34,7 @@ export const expertiseData = [
         Conducting website updates and maintenance tasks as needed.
         
         Managing Google Analytics and other marketing performance tracking tools to measure success of content and social media campaigns.
-        
-        Skills and Experience:
-        
-        Excellent written and verbal communication skills.
-        
-        Strong attention to detail and ability to write clear, concise, and engaging content.
-        
-        Knowledge of social media platforms and experience managing social media accounts.
-        
-        Experience with WordPress or other content management systems.
-        
-        Familiarity with SEO and content marketing best practices.
-        
-        Experience with Adobe Creative Suite, particularly Photoshop and InDesign.
-        
-        As a Junior Web Developer, I am excited to apply my experience in content creation and social media management to my work building and maintaining websites and web applications. I am confident that my strong communication skills, attention to detail, and familiarity with CMS platforms and SEO best practices will enable me to contribute to web development projects in a meaningful way.`,
+      `,
     },
   },
 ];
