@@ -16,7 +16,7 @@ export const StyledExpertise = styled.div`
     margin-right: 1.25em;
   }
   .expertise-list-date span {
-    color: #667081;
+    color: ${({ theme }) => theme.colors.dark};
     font-size: 1rem;
   }
   .expertise-list-info {

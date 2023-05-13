@@ -10,7 +10,7 @@ export const StyledTimeline = styled.div`
     padding: 15px;
   }
   .timeline-list:before {
-    background: #26c17e;
+    background: ${({ theme }) => theme.colors.accent};
     position: absolute;
     top: 0;
     bottom: 0;
@@ -30,7 +30,7 @@ export const StyledTimeline = styled.div`
   }
   .timeline-list li .timeline-date {
     padding: 15px;
-    background: #fff;
+    background: ${({ theme }) => theme.colors.secondary};
     position: relative;
     left: -15px;
   }

@@ -34,17 +34,6 @@ export const StyledNavigation = styled.aside`
     gap: 1.3em;
     padding: 1.25em 0;
   }
-
-  li:hover a,
-  li:hover i,
-  li.active {
-    color: ${({ theme }) => theme.colors.accent};
-  }
-
-  i {
-    width: 14px;
-  }
-
   i,
   a {
     text-transform: capitalize;
@@ -54,13 +43,24 @@ export const StyledNavigation = styled.aside`
     font-weight: 600;
   }
 
+  li:hover a,
+  li:hover i,
+  li.active a,
+  li.active i {
+    color: ${({ theme }) => theme.colors.accent};
+  }
+
+  i {
+    width: 14px;
+  }
+
   .menu {
     cursor: pointer;
     position: absolute;
     right: ${({ width }) => (width === '54px' ? '-30px' : '-50px')};
     top: -85px;
-    background-color: #222935;
-    color: #fff;
+    background-color: ${({ theme }) => theme.colors.main};
+    color: ${({ theme }) => theme.colors.secondary};
     border: none;
     width: 30px;
     aspect-ratio: 1;

@@ -63,8 +63,8 @@ table {
   }
   
   body {
-    background-color: #FFF;
-		color: #222935;
+    background-color: ${({ theme }) => theme.colors.secondary};;
+		color: ${({ theme }) => theme.colors.main};;
     font-family: 'Open Sans', sans-serif;
   }
 `;

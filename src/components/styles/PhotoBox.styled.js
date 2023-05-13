@@ -6,7 +6,7 @@ export const StyledPhotoBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.secondary};
   text-align: center;
   z-index: 100;
   gap: 10px;
@@ -17,7 +17,7 @@ export const StyledPhotoBox = styled.div`
     aspect-ratio: 1;
     border-radius: 100%;
     object-fit: cover;
-    border: 2px solid #fff;
+    border: 2px solid ${({ theme }) => theme.colors.secondary};
   }
 
   h1 {

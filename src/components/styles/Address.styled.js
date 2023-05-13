@@ -14,7 +14,7 @@ export const StyledAddress = styled.address`
     color: ${({ theme }) => theme.colors.accent};
   }
   .info a {
-    color: #222935;
+    color: ${({ theme }) => theme.colors.main};
     text-decoration: none;
     font-weight: 700;
   }
