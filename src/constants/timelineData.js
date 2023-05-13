@@ -2,16 +2,16 @@ export const timelineData = [
   {
     date: '2011',
     title: 'Dalian University Of Foreign Languages',
-    text: `Dalian University of Foreign Languages (DLUFL; simplified Chinese: 大连外国语大学; traditional Chinese: 大連外國語大学; pinyin: Dàlián wàiguóyǔ dàxué) is a public university in Dalian, Liaoning, China and one of the top foreign language institutes in China. Formerly known as Dalian School of Japanese Language, DLUFL was founded in 1964 with the help of the late Chinese Premier Zhou Enlai. It is now under the administration of the Education Commission of Liaoning Province. Through 40 years of development, DLUFL has fledged into a multi-disciplinary foreign language university which also offers programs in other fields like arts, economics, management, engineering and law.`,
+    text: ` I attended Dalian University of Foreign Languages (DLUFL) in Liaoning, China, where I pursued a Bachelor of Arts in Chinese Literature. Throughout my four years of study, I was exposed to a wide range of literature, from classic works to contemporary pieces. In addition to studying literature in Chinese, I also had the opportunity to learn about Chinese literature and culture through elective courses. Outside of the classroom, I participated in various extracurricular activities, including a literature club. These experiences broadened my perspective and deepened my appreciation for the power of language and storytelling.`,
   },
+  {
+    date: '2012',
+    title: 'Master of Business Administration',
+    text: `I earned my Master of Business Administration (MBA) degree from Alamty University of Bussnes in the Kazakhstan. The program provided me with a comprehensive understanding of business concepts, such as marketing, finance, accounting, and operations management. I also had the opportunity to specialize in entrepreneurship and innovation, which allowed me to develop skills in identifying and pursuing new business opportunities. Throughout the program, I worked on various group projects, which improved my collaboration and leadership skills. The MBA program also provided me with a strong professional network that I can tap into for career opportunities.`,
+    },
   {
     date: '2023',
     title: 'EPAM',
-    text: 'Et irure culpa ad proident labore excepteur elit dolore. Quis commodo elit culpa eiusmod dolor proident non commodo excepteur aute duis duis eu fugiat. Eu duis occaecat nulla eiusmod non esse cillum est aute elit amet cillum commodo.\r\n',
-  },
-  {
-    date: 2012,
-    title: 'Title 2',
-    text: 'Labore esse tempor nisi non mollit enim elit ullamco veniam elit duis nostrud. Enim pariatur ullamco dolor eu sunt ad velit aute eiusmod aliquip voluptate. Velit magna labore eiusmod eiusmod labore amet eiusmod. In duis eiusmod commodo duis. Exercitation Lorem sint do aliquip veniam duis elit quis culpa irure quis nulla. Reprehenderit fugiat amet sint commodo ex.\r\n',
+    text: `EPAM Systems, Inc. is an American company that specializes in software engineering services, digital platform engineering, and digital product design, operating out of Newtown, Pennsylvania. I finished the EPAM web developer course, where I learned about HTML, CSS, JS, and React 'During my studies, I gained a deep understanding of computer architecture, algorithms, data structures, programming languages such as HTML, CSS, JavaSctripts and React. I also had the opportunity to work on various projects, including a web app for tracking fitness goals and a web application for online shopping. These experiences honed my skills in problem-solving, collaboration, and communication. Overall, my degree program provided me with a strong foundation in web development and prepared me for a career in web development.`,
   },
 ];
