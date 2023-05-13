@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Button from '../Button';
 import { navlinks } from '../../constants/navlinks.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,11 +7,15 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { HashLink } from 'react-router-hash-link';
 
 const DesktopNavigation = () => {
+  const location = useLocation();
   return (
     <nav>
       <ul>
         {navlinks.map((link) => (
-          <li key={link.id}>
+          <li
+            key={link.id}
+            className={location.hash === link.id ? 'active' : ''}
+          >
             <i>
               <FontAwesomeIcon icon={link.icon} />
             </i>
