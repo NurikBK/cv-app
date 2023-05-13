@@ -31,6 +31,7 @@ export const StyledNavigation = styled.nav`
   }
 
   i {
+    font-size: 1rem;
     width: 14px;
   }
 
