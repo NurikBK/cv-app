@@ -29,4 +29,13 @@ export const StyledFeedback = styled.div`
   .info h3 {
     font: 700 16px/20px 'Open Sans', sans-serif;
   }
+
+  a {
+    text-decoration: underline;
+    color: ${({ theme }) => theme.colors.dark};
+  }
+
+  a:hover {
+    color: ${({ theme }) => theme.colors.accent};
+  }
 `;

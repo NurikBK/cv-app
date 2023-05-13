@@ -36,6 +36,8 @@ export const StyledTimeline = styled.div`
   }
   .timeline-list li .timeline-event {
     position: relative;
+    background-color: #eee;
+    padding: 1em;
   }
   .timeline-list li .timeline-event:after {
     content: '';
@@ -47,5 +49,14 @@ export const StyledTimeline = styled.div`
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-right: 10px solid #eee;
+  }
+
+  .info h3 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .info p {
+    font-size: 0.875rem;
+    font-weight: 400;
   }
 `;

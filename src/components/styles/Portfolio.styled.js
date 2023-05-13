@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledPortfolio = styled.div`
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
   .tabs {
     font-size: 16px;
     margin-bottom: 20px;
@@ -70,5 +74,10 @@ export const StyledPortfolio = styled.div`
   }
   .portfolio-info a {
     text-decoration: underline;
+    color: ${({ theme }) => theme.colors.dark};
+  }
+
+  .portfolio-info a:hover {
+    color: ${({ theme }) => theme.colors.accent};
   }
 `;
