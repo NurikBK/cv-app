@@ -12,7 +12,7 @@ export const StyledButton = styled.button`
   z-index: 2000;
   i {
     margin-right: 0.8em;
-    color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.secondary} !important;
   }
   &:hover {
     background: ${({ theme }) => theme.colors.accent};
