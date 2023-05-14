@@ -13,8 +13,9 @@ export const StyledPortfolio = styled.div`
   }
 
   button {
-    background-color: ${({ theme }) => theme.colors.main};
-    color: ${({ theme }) => theme.colors.secondary};
+    background-color: transparent;
+    color: ${({ theme }) => theme.colors.accent};
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     font-family: 'Open-sans', sans-serif;
     border: none;
     border-radius: 5px;
@@ -23,7 +24,7 @@ export const StyledPortfolio = styled.div`
   }
 
   button.active {
-    color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.main};
   }
 
   button:active {
