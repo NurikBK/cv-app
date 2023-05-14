@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const StyledPortfolio = styled.div`
   img {
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
+    height: 100%;
   }
   .tabs {
     font-size: 16px;
