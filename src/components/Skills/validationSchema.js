@@ -1,11 +1,10 @@
 import * as Yup from 'yup';
 
 export const validationSchema = Yup.object({
-  skill: Yup.string()
-    .max(15, 'Must be 15 characters or less')
-    .required('Required'),
+  skill: Yup.string().required('Skill name is a requaired field'),
   range: Yup.number()
-    .min(10, 'Must be 10 or more')
-    .max(100, 'Must be 100 or less')
-    .required('Required'),
+    .min(10, 'Skill range must be greather than or equal to 10')
+    .max(100, 'Skill range must be less than or equal to 100')
+    .typeError('Range must be a number')
+    .required('Skill range is a requaired field'),
 });
