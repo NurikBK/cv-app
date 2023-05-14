@@ -10,7 +10,7 @@ const CInput = ({ label, ...props }) => {
       <label htmlFor={props.id || props.name}>{label}</label>
       <input {...field} {...props} />
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <p className="error">{meta.error}</p>
       ) : null}
     </div>
   );
@@ -26,22 +26,22 @@ const SkillsForm = () => {
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={(values, { resetForm }) => {
+        onSubmit={async (values, { resetForm }) => {
           alert(JSON.stringify(values, null, 2));
           resetForm();
         }}
       >
-        {({ values, handleSubmit, handleReset, dirty, isValid }) => (
+        {({ values, handleSubmit, dirty, isValid }) => (
           <Form className="form-container" onSubmit={handleSubmit}>
             <CInput
-              label="Skill name"
+              label="Skill name:"
               name="skill"
               type="text"
               placeholder="Enter skill name"
             />
 
             <CInput
-              label="Skill range"
+              label="Skill range:"
               name="range"
               type="number"
               placeholder="Enter skill range "
@@ -49,10 +49,10 @@ const SkillsForm = () => {
 
             <button
               type="submit"
-              className="btn-submit"
+              className="btn"
               disabled={!dirty || !isValid}
             >
-              Submit
+              Add Skill
             </button>
           </Form>
         )}
