@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledSkills = styled.div`
+  position: relative;
   .container {
     width: 100%;
     border: 1px solid ${({ theme }) => theme.colors.accent};
@@ -50,8 +51,8 @@ export const StyledSkills = styled.div`
 
   .btn-open {
     position: absolute;
-    top: 0;
-    right: 30px;
+    top: -100px;
+    right: 0;
   }
   button:disabled {
     background-color: ${({ theme }) => theme.colors.dark};

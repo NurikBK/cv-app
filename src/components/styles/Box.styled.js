@@ -4,8 +4,6 @@ export const StyledBox = styled.div`
   padding: 0 2em;
   margin-bottom: 3.125em;
   width: 100%;
-  position: relative;
-  z-index: -1;
   &:first-child {
     padding-top: 2.5em;
   }
