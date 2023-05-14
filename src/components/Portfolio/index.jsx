@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { StyledPortfolio } from '../styles/Portfolio.styled';
 import Isotope from 'isotope-layout';
 import project1Img from '../../assets/project1.png';
+import project2Img from '../../assets/project2.png';
+import project3Img from '../../assets/project3.png';
+import project4Img from '../../assets/project4.png';
 
 const Portfolio = () => {
   // init one ref to store the future isotope object
@@ -57,55 +60,87 @@ const Portfolio = () => {
         <li className="filter-item ui">
           <img src={project1Img} alt="card" />
           <div className="portfolio-info">
-            <h2>Some text</h2>
-            <p>
-              Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-              arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-              justo. Nullam dictum felis eu pede mollis{' '}
-            </p>
-            <a href="https://somesite.com" target="_blank" rel="noreferrer">
+            <h2>Space Travel</h2>
+            <p>In this project I used plain HTML, CSS and JS.</p>
+            <a
+              href="https://nurikbk.github.io/space-travel-site/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Demo
+            </a>
+            <br />
+            <a
+              href="https://github.com/NurikBK/space-travel-site"
+              target="_blank"
+              rel="noreferrer"
+            >
               View source
             </a>
           </div>
         </li>
         <li className="filter-item code">
-          <img src={project1Img} alt="card" />
+          <img src={project2Img} alt="card" />
           <div className="portfolio-info">
             <h2>Some text</h2>
-            <p>
-              Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-              arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-              justo. Nullam dictum felis eu pede mollis{' '}
-            </p>
-            <a href="https://somesite.com" target="_blank" rel="noreferrer">
+            <p>In this project I used React, MUI and other React libs.</p>
+            <a
+              href="https://deft-bombolone-276339.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Demo
+            </a>
+            <br />
+            <a
+              href="https://github.com/NurikBK/Admin-dashboard"
+              target="_blank"
+              rel="noreferrer"
+            >
               View source
             </a>
           </div>
         </li>
         <li className="filter-item ui">
-          <img src={project1Img} alt="card" />
+          <img src={project3Img} alt="card" />
           <div className="portfolio-info">
-            <h2>Some text</h2>
-            <p>
-              Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-              arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-              justo. Nullam dictum felis eu pede mollis{' '}
-            </p>
-            <a href="https://somesite.com" target="_blank" rel="noreferrer">
+            <h2>EVOGYM</h2>
+            <p>In this project I used React TS with Tailwind.</p>
+            <a
+              href="https://stunning-sopapillas-08e964.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Demo
+            </a>
+            <br />
+            <a
+              href="https://github.com/NurikBK/fitness-web-app"
+              target="_blank"
+              rel="noreferrer"
+            >
               View source
             </a>
           </div>
         </li>
         <li className="filter-item code">
-          <img src={project1Img} alt="card" />
+          <img src={project4Img} alt="card" />
           <div className="portfolio-info">
-            <h2>Some text</h2>
-            <p>
-              Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-              arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-              justo. Nullam dictum felis eu pede mollis{' '}
-            </p>
-            <a href="https://somesite.com" target="_blank" rel="noreferrer">
+            <h2>Split Landing Page</h2>
+            <p>In this project I used plain HTML, CSS and JS.</p>
+            <a
+              href="https://nurikbk.github.io/split-landing-page/#"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Demo
+            </a>
+            <br />
+            <a
+              href="https://github.com/NurikBK/split-landing-page"
+              target="_blank"
+              rel="noreferrer"
+            >
               View source
             </a>
           </div>
