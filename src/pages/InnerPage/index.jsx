@@ -13,6 +13,7 @@ import { Container } from '../../components/styles/Container.styled';
 import { timelineData } from '../../constants/timelineData';
 import { expertiseData } from '../../constants/expertiseData';
 import { feedbackData } from '../../constants/feedbacksData';
+import Skills from '../../components/Skills';
 
 const InnerPage = () => {
   return (
@@ -54,7 +55,9 @@ const InnerPage = () => {
         <Box title="Experience" id="experience">
           <Expertise data={expertiseData} />
         </Box>
-        <Box title="Skills" id="skills"></Box>
+        <Box title="Skills" id="skills">
+          <Skills />
+        </Box>
         <Box title="Portfolio" id="portfolio">
           <Portfolio />
         </Box>
