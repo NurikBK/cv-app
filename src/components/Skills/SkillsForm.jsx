@@ -43,15 +43,11 @@ const SkillsForm = () => {
             <CInput
               label="Skill range:"
               name="range"
-              type="number"
+              type="text"
               placeholder="Enter skill range "
             />
 
-            <button
-              type="submit"
-              className="btn"
-              disabled={!dirty || !isValid}
-            >
+            <button type="submit" className="btn" disabled={!dirty || !isValid}>
               Add Skill
             </button>
           </Form>
