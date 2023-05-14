@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchSkills } from '../../features/skills/skillsSlice';
 import SkillsForm from './SkillsForm';
 import { StyledSkills } from '../styles/Skills.styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,17 +8,25 @@ import { faPenClip } from '@fortawesome/free-solid-svg-icons';
 import Skill from './Skill';
 
 const Skills = () => {
+  const dispatch = useDispatch();
   const [isClicked, setIsClicked] = useState(false);
-  const data = [
-    {
-      name: 'HTML',
-      range: '80',
-    },
-    {
-      name: 'CSS',
-      range: '60',
-    },
-  ];
+  const data = useSelector((state) => state.skills.skills);
+  const status = useSelector((state) => state.skills.status);
+  const error = useSelector((state) => state.skills.error);
+
+  console.log(data);
+  useEffect(() => {
+    dispatch(fetchSkills());
+  }, [dispatch]);
+
+  if (status === 'loading') {
+    return <div>Loading...</div>;
+  }
+
+  if (status === 'failed') {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <StyledSkills>
       <button
@@ -30,8 +40,8 @@ const Skills = () => {
       </button>
       {isClicked && <SkillsForm />}
 
-      {data.map((item, index) => (
-        <Skill key={index} skill={item} />
+      {data.map((item) => (
+        <Skill key={item.id} skill={item} />
       ))}
       <div className="skills-grade">
         <p className="grade first">Beginner</p>

@@ -1,48 +1,33 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-export const fetchCommunityData = createAsyncThunk(
-  'community/fetchData',
-  async () => {
-    const res = await fetch('http://localhost:3000/community', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+export const fetchTimeline = createAsyncThunk('timeline/fetchTimeline', async () => {
+  const response = await axios.get('/api/timelines');
+  return response.data;
+});
 
-    if (!res.ok) {
-      throw new Error('Unable to fetch community data');
-    }
-
-    const data = await res.json();
-    return data;
-  }
-);
-
-const communitySlice = createSlice({
-  name: 'community',
-  initialState: { isHidden: true, data: [], status: 'idle', error: null },
-  reducers: {
-    setIsHidden: (state, action) => {
-      state.isHidden = action.payload;
-    },
+const timelineSlice = createSlice({
+  name: 'timeline',
+  initialState: {
+    timeline: [],
+    status: 'idle',
+    error: null,
   },
+  reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchCommunityData.pending, (state) => {
+      .addCase(fetchTimeline.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(fetchCommunityData.fulfilled, (state, action) => {
+      .addCase(fetchTimeline.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.data = action.payload;
+        state.timeline = action.payload.timeline;
       })
-      .addCase(fetchCommunityData.rejected, (state, action) => {
+      .addCase(fetchTimeline.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
       });
   },
 });
 
-export const { setIsHidden } = communitySlice.actions;
-
-export default communitySlice.reducer;
+export default timelineSlice.reducer;

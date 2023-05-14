@@ -1,48 +1,38 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-export const fetchCommunityData = createAsyncThunk(
-  'community/fetchData',
-  async () => {
-    const res = await fetch('http://localhost:3000/community', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+export const fetchSkills = createAsyncThunk('skills/fetchSkills', async () => {
+  const response = await axios.get('/api/skills');
+  return response.data;
+});
 
-    if (!res.ok) {
-      throw new Error('Unable to fetch community data');
-    }
+export const addSkill = createAsyncThunk('skills/addSkill', async (skills) => {
+  const response = await axios.post('/api/skills', skills);
+  return response.data;
+});
 
-    const data = await res.json();
-    return data;
-  }
-);
-
-const communitySlice = createSlice({
-  name: 'community',
-  initialState: { isHidden: true, data: [], status: 'idle', error: null },
-  reducers: {
-    setIsHidden: (state, action) => {
-      state.isHidden = action.payload;
-    },
+const skillsSlice = createSlice({
+  name: 'skills',
+  initialState: {
+    skills: [],
+    status: 'idle',
+    error: null,
   },
+  reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchCommunityData.pending, (state) => {
+      .addCase(fetchSkills.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(fetchCommunityData.fulfilled, (state, action) => {
+      .addCase(fetchSkills.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.data = action.payload;
+        state.skills = action.payload.skills;
       })
-      .addCase(fetchCommunityData.rejected, (state, action) => {
+      .addCase(fetchSkills.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
       });
   },
 });
 
-export const { setIsHidden } = communitySlice.actions;
-
-export default communitySlice.reducer;
+export default skillsSlice.reducer;

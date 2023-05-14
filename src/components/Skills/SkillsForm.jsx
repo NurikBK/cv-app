@@ -1,33 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Formik, Form } from 'formik';
-import { useField } from 'formik';
 import { validationSchema } from './validationSchema';
-
-const CInput = ({ label, ...props }) => {
-  const [field, meta] = useField(props);
-  return (
-    <div className="wrapper">
-      <label htmlFor={props.id || props.name}>{label}</label>
-      <input {...field} {...props} />
-      {meta.touched && meta.error ? (
-        <p className="error">{meta.error}</p>
-      ) : null}
-    </div>
-  );
-};
+import { addSkill, fetchSkills } from '../../features/skills/skillsSlice';
+import { useDispatch } from 'react-redux';
+import { initialValues } from './initialValues';
+import { CInput } from './CInput';
 
 const SkillsForm = () => {
-  const initialValues = {
-    skill: '',
-    range: '',
+  const dispatch = useDispatch();
+
+  const handleAddSkill = async (skill) => {
+    await dispatch(addSkill(skill));
+    dispatch(fetchSkills());
   };
+
   return (
     <div className="container">
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={async (values, { resetForm }) => {
-          alert(JSON.stringify(values, null, 2));
+          await handleAddSkill(values);
           resetForm();
         }}
       >
@@ -35,7 +28,7 @@ const SkillsForm = () => {
           <Form className="form-container" onSubmit={handleSubmit}>
             <CInput
               label="Skill name:"
-              name="skill"
+              name="name"
               type="text"
               placeholder="Enter skill name"
             />

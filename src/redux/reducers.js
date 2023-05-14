@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import communityReducer from '../features/skills/skillsSlice';
+import skillsReducer from '../features/skills/skillsSlice';
+import timelineReducer from '../features/timeline/timelineSlice';
 
 const rootReducer = combineReducers({
-  community: communityReducer,
+  skills: skillsReducer,
+  timeline: timelineReducer,
 });
 
 export default rootReducer;
