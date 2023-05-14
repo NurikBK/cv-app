@@ -49,12 +49,18 @@ export const StyledSkills = styled.div`
     border: none;
   }
 
+  .btn:hover {
+    background-color: ${({ theme }) => theme.colors.accent};
+  }
+
   .btn-open {
     position: absolute;
     top: -100px;
     right: 0;
   }
-  button:disabled {
+
+  .btn:disabled, .btn:disabled .btn:hover  {
+    cursor: not-allowed;
     background-color: ${({ theme }) => theme.colors.dark};
   }
 
