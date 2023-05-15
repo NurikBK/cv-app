@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyledFeedback } from '../styles/Feedback.styles';
+import Info from '../Info';
 
 const Feedback = ({ data }) => {
   return (
@@ -8,9 +9,7 @@ const Feedback = ({ data }) => {
         {data.map((item, index) => (
           <li key={index}>
             <blockquote>
-              <div className="info">
-                <p>{item.feedback}</p>
-              </div>
+              <Info text={item.feedback} />
               <div className="feedback-reporter">
                 <img
                   className="feedback-reporter-photo"
