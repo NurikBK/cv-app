@@ -14,7 +14,7 @@ export const addSkill = createAsyncThunk('skills/addSkill', async (skills) => {
 const skillsSlice = createSlice({
   name: 'skills',
   initialState: {
-    skills: [],
+    data: [],
     status: 'idle',
     error: null,
   },
@@ -26,7 +26,7 @@ const skillsSlice = createSlice({
       })
       .addCase(fetchSkills.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.skills = action.payload.skills;
+        state.data = action.payload.skills;
       })
       .addCase(fetchSkills.rejected, (state, action) => {
         state.status = 'failed';
