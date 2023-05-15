@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { StyledTimeline } from '../styles/Timeline.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTimeline } from '../../features/timeline/timelineSlice';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRotate } from '@fortawesome/free-solid-svg-icons';
 
 const Timeline = () => {
   const dispatch = useDispatch();
@@ -20,7 +22,9 @@ const Timeline = () => {
   return (
     <StyledTimeline>
       {status === 'loading' ? (
-        <div>Loading...</div>
+        <div className="container">
+          <FontAwesomeIcon icon={faRotate} className="rotate" />
+        </div>
       ) : (
         <ul className="timeline-list">
           {data.map((item) => (
