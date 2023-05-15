@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Formik, Form } from 'formik';
 import { validationSchema } from './validationSchema';
 import { addSkill, fetchSkills } from '../../features/skills/skillsSlice';
