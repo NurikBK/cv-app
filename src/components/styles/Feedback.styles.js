@@ -25,11 +25,6 @@ export const StyledFeedback = styled.div`
       }
     }
   }
-  
-  .info {
-    background: #eee;
-    padding: 15px;
-  }
 
   h3 {
     font: 700 16px/20px 'Open Sans', sans-serif;
