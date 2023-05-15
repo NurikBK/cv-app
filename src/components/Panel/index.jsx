@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import DesktopNavigation from './DesktopNavigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import MobileNavigation from './MobileNavigation';
-import { StyledNavigation } from '../styles/Navigation.styled';
+import { StyledPanel } from '../styles/Panel.styled';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import PhotoBox from '../PhotoBox';
 import avatarImg from '../../assets/avatar.jpg';
+import MobileNavigation from '../Navigation/MobileNavigation';
+import DesktopNavigation from '../Navigation/DesktopNavigation';
 
-const Navigation = () => {
+const Panel = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const isMobile = useMediaQuery('(max-width:600px)');
 
   const isDesktop = isCollapsed || isMobile;
 
   return (
-    <StyledNavigation width={isDesktop ? '54px' : '250px'}>
+    <StyledPanel width={isDesktop ? '54px' : '250px'}>
       <div className="sticky">
         <PhotoBox
           avatar={avatarImg}
@@ -33,8 +33,8 @@ const Navigation = () => {
           </button>
         )}
       </div>
-    </StyledNavigation>
+    </StyledPanel>
   );
 };
 
-export default Navigation;
+export default Panel;

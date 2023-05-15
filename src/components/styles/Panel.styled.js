@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledNavigation = styled.aside`
+export const StyledPanel = styled.aside`
   background-color: ${({ theme }) => theme.colors.main};
   position: relative;
   display: flex;

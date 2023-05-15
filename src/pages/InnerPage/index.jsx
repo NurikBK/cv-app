@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from '../../components/Navigation';
 import Box from '../../components/Box';
+import Panel from '../../components/Panel';
 import Timeline from '../../components/Timeline';
 import Expertise from '../../components/Expertise';
 import Feedback from '../../components/FeedBack';
@@ -13,12 +13,11 @@ import { Container } from '../../components/styles/Container.styled';
 import { timelineData } from '../../constants/timelineData';
 import { expertiseData } from '../../constants/expertiseData';
 import { feedbackData } from '../../constants/feedbacksData';
-import Skills from '../../components/Skills';
 
 const InnerPage = () => {
   return (
     <Container id="#top">
-      <Navigation />
+      <Panel />
       <main>
         <Box title="About me" id="about-me">
           <p>
@@ -55,9 +54,7 @@ const InnerPage = () => {
         <Box title="Experience" id="experience">
           <Expertise data={expertiseData} />
         </Box>
-        <Box title="Skills" id="skills">
-          <Skills />
-        </Box>
+        <Box title="Skills" id="skills"></Box>
         <Box title="Portfolio" id="portfolio">
           <Portfolio />
         </Box>
