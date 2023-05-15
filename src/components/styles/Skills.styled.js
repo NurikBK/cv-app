@@ -18,26 +18,20 @@ export const StyledSkills = styled.div`
     font-size: 0.875rem;
     position: relative;
     width: fit-content;
-  }
-
-  .wrapper input {
-    padding: 0.625em;
-    border-radius: 5px;
-    border: 1px solid #667081;
-    width: 270px;
-  }
-
-  .wrapper .error {
-    text-transform: lowercase;
-    color: #ff3333;
-    position: absolute;
-    right: 0;
-    bottom: -18px;
-    font-size: 0.8rem;
-  }
-
-  i {
-    margin-right: 0.46875em;
+    input {
+      padding: 0.625em;
+      border-radius: 5px;
+      border: 1px solid #667081;
+      width: 270px;
+    }
+    .error {
+      text-transform: lowercase;
+      color: #ff3333;
+      position: absolute;
+      right: 0;
+      bottom: -18px;
+      font-size: 0.8rem;
+    }
   }
 
   .btn {
@@ -59,7 +53,8 @@ export const StyledSkills = styled.div`
     right: 0;
   }
 
-  .btn:disabled, .btn:disabled .btn:hover  {
+  .btn:disabled,
+  .btn:disabled .btn:hover {
     cursor: not-allowed;
     background-color: ${({ theme }) => theme.colors.dark};
   }
