@@ -13,7 +13,7 @@ export const StyledBox = styled.div`
     color: ${({ theme }) => theme.colors.accent};
     margin-bottom: 2.5em;
   }
-  @media (min-width: 1000px) {
+  @media (min-width: 1150px) {
     width: 80%;
   }
 `;
