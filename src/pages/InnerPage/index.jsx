@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from '../../components/Navigation';
 import Box from '../../components/Box';
+import Panel from '../../components/Panel';
 import Timeline from '../../components/Timeline';
 import Expertise from '../../components/Expertise';
 import Feedback from '../../components/FeedBack';
@@ -17,7 +17,7 @@ import { feedbackData } from '../../constants/feedbacksData';
 const InnerPage = () => {
   return (
     <Container id="#top">
-      <Navigation />
+      <Panel />
       <main>
         <Box title="About me" id="about-me">
           <p>
