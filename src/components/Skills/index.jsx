@@ -10,11 +10,10 @@ import Skill from './Skill';
 const Skills = () => {
   const dispatch = useDispatch();
   const [isClicked, setIsClicked] = useState(false);
-  const data = useSelector((state) => state.skills.skills);
+  const data = useSelector((state) => state.skills.data);
   const status = useSelector((state) => state.skills.status);
   const error = useSelector((state) => state.skills.error);
 
-  console.log(data);
   useEffect(() => {
     dispatch(fetchSkills());
   }, [dispatch]);
