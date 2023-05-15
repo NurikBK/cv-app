@@ -8,7 +8,6 @@ const Timeline = () => {
   const data = useSelector((state) => state.timeline.timeline);
   const status = useSelector((state) => state.timeline.status);
   const error = useSelector((state) => state.timeline.error);
-  console.log(data);
 
   useEffect(() => {
     dispatch(fetchTimeline());
