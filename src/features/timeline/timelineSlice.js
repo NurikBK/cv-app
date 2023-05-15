@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchTimeline = createAsyncThunk('timeline/fetchTimeline', async () => {
-  const response = await axios.get('/api/timelines');
+  const response = await axios.get('/api/educations');
   return response.data;
 });
 
