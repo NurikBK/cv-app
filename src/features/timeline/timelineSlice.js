@@ -1,10 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const fetchTimeline = createAsyncThunk('timeline/fetchTimeline', async () => {
-  const response = await axios.get('/api/educations');
-  return response.data;
-});
+export const fetchTimeline = createAsyncThunk(
+  'timeline/fetchTimeline',
+  async () => {
+    const response = await axios.get('/api/educations');
+    return response.data;
+  }
+);
 
 const timelineSlice = createSlice({
   name: 'timeline',
@@ -21,7 +24,7 @@ const timelineSlice = createSlice({
       })
       .addCase(fetchTimeline.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.timeline = action.payload.timeline;
+        state.timeline = action.payload.educations;
       })
       .addCase(fetchTimeline.rejected, (state, action) => {
         state.status = 'failed';
