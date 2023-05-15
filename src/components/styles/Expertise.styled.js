@@ -22,15 +22,18 @@ export const StyledExpertise = styled.div`
   .expertise-list-info {
     margin-top: 1.5em;
   }
-  .expertise-list h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 0.625em;
+  .expertise-list {
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.625em;
+    }
+    p {
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
   }
-  .expertise-list p {
-    font-size: 0.875rem;
-    font-weight: 400;
-  }
+  
   @media (min-width: 800px) {
     .expertise-list li {
       flex-direction: row;

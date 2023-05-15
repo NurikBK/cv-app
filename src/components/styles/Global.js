@@ -52,7 +52,6 @@ table {
 	border-spacing: 0;
 }
 /* End reset styles */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
   html {
     scroll-behavior: smooth;
@@ -60,6 +59,7 @@ table {
 
   * {
     box-sizing: border-box;
+		font-family: 'Open Sans', sans-serif;
   }
   
   body {

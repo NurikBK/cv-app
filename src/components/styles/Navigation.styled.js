@@ -33,25 +33,23 @@ export const StyledNavigation = styled.aside`
     align-items: center;
     gap: 1.3em;
     padding: 1.25em 0;
-  }
-  i,
-  a {
-    text-transform: capitalize;
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.dark};
-    font-size: 1rem;
-    font-weight: 600;
-  }
-
-  li:hover a,
-  li:hover i,
-  li.active a,
-  li.active i {
-    color: ${({ theme }) => theme.colors.accent};
-  }
-
-  i {
-    width: 14px;
+    i,
+    a {
+      text-transform: capitalize;
+      text-decoration: none;
+      color: ${({ theme }) => theme.colors.dark};
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    i {
+      width: 14px;
+    }
+    &:hover a,
+    &:hover i,
+    &.active a,
+    &.active i {
+      color: ${({ theme }) => theme.colors.accent};
+    }
   }
 
   .menu {
