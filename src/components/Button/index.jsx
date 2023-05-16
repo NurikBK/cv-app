@@ -6,7 +6,7 @@ const Button = ({ text, icon = null, padding }) => {
   return (
     <StyledButton padding={padding}>
       {icon && (
-        <i>
+        <i data-testid='icon'>
           <FontAwesomeIcon icon={icon} />
         </i>
       )}

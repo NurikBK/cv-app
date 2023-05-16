@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Info component renders info with text prop 1`] = `
+<p>
+  back
+</p>
+`;

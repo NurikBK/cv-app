@@ -19,13 +19,15 @@ const MobileNavigation = () => {
               className={location.hash === link.id ? 'active' : ''}
             >
               <HashLink to={link.id}>
-                <FontAwesomeIcon icon={link.icon} />
+                <i data-testid={link.id}>
+                  <FontAwesomeIcon icon={link.icon} />
+                </i>
               </HashLink>
             </li>
           ))}
         </ul>
         <Link to="/">
-          <Button icon={faChevronLeft} padding="0.5em 1em" />
+          <Button icon={faChevronLeft} padding="0.5em 1em" data-testid="back" />
         </Link>
       </nav>
     </>
