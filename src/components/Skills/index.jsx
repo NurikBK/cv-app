@@ -18,10 +18,6 @@ const Skills = () => {
     dispatch(fetchSkills());
   }, [dispatch]);
 
-  if (status === 'loading') {
-    return <div>Loading...</div>;
-  }
-
   if (status === 'failed') {
     return <div>Error: {error}</div>;
   }
@@ -38,7 +34,7 @@ const Skills = () => {
         Open Edit
       </button>
       {isClicked && <SkillsForm />}
-
+      
       {data.map((item) => (
         <Skill key={item.id} skill={item} />
       ))}
