@@ -6,9 +6,11 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from '../../constants/theme';
 import useMediaQuery from '../../hooks/useMediaQuery';
 
+jest.mock('../../hooks/useMediaQuery');
 describe('Panel', () => {
-  jest.mock(useMediaQuery, () => jest.fn());
   it('renders photo box', () => {
+    useMediaQuery.mockReturnValue(true);
+
     render(
       <BrowserRouter>
         <ThemeProvider theme={theme}>
@@ -20,7 +22,7 @@ describe('Panel', () => {
     expect(avatar).toBeInTheDocument();
   });
 
-  it('renders navigation', () => {
+  it('renders desktop navigation', () => {
     render(
       <BrowserRouter>
         <ThemeProvider theme={theme}>
@@ -28,9 +30,9 @@ describe('Panel', () => {
         </ThemeProvider>
       </BrowserRouter>
     );
-    
+
     useMediaQuery.mockReturnValue(true);
-    const navigation = screen.getByRole('navigation');
+    const navigation = screen.getByTestId('desktop');
     expect(navigation).toBeInTheDocument();
   });
 
@@ -42,7 +44,8 @@ describe('Panel', () => {
         </ThemeProvider>
       </BrowserRouter>
     );
-    const button = screen.getByRole('button', { name: 'menu' });
+    useMediaQuery.mockReturnValue(true);
+    const button = screen.getByTestId('menu');
     expect(button).toBeInTheDocument();
   });
 });

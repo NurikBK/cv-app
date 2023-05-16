@@ -27,6 +27,7 @@ const Panel = () => {
         {!isMobile && (
           <button
             className="menu"
+            data-testid="menu"
             onClick={() => setIsCollapsed((prevState) => !prevState)}
           >
             <FontAwesomeIcon icon={faBars} />

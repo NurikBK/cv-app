@@ -11,7 +11,7 @@ const MobileNavigation = () => {
 
   return (
     <>
-      <nav className="sticky">
+      <nav data-testid="mobile">
         <ul>
           {navlinks.map((link) => (
             <li

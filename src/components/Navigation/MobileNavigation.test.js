@@ -15,7 +15,7 @@ describe('MobileNavigation component', () => {
         </ThemeProvider>
       </BrowserRouter>
     );
-    const icons = navlinks.map((item, index) => screen.getByTestId(item.id));
+    const icons = navlinks.map((item) => screen.getByTestId(item.id));
     const button = screen.getByTestId(/back/i);
 
     expect(button).toBeInTheDocument();

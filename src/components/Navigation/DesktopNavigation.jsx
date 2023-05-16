@@ -9,7 +9,7 @@ import { HashLink } from 'react-router-hash-link';
 const DesktopNavigation = () => {
   const location = useLocation();
   return (
-    <nav>
+    <nav data-testid="desktop">
       <ul>
         {navlinks.map((link) => (
           <li
