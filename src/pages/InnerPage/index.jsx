@@ -10,7 +10,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { HashLink } from 'react-router-hash-link';
 import { Container } from '../../components/styles/Container.styled';
-import { timelineData } from '../../constants/timelineData';
 import { expertiseData } from '../../constants/expertiseData';
 import { feedbackData } from '../../constants/feedbacksData';
 import Skills from '../../components/Skills';
@@ -50,7 +49,7 @@ const InnerPage = () => {
           </p>
         </Box>
         <Box title="Education" id="education">
-          <Timeline data={timelineData} />
+          <Timeline />
         </Box>
         <Box title="Experience" id="experience">
           <Expertise data={expertiseData} />

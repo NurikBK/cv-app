@@ -1,10 +1,10 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
 import { validationSchema } from './validationSchema';
-import { addSkill, fetchSkills } from '../../features/skills/skillsSlice';
+import { addSkill, fetchSkills } from '../../../features/skills/skillsSlice';
 import { useDispatch } from 'react-redux';
 import { initialValues } from './initialValues';
-import { CInput } from './CInput';
+import { CInput } from '../CInput/CInput';
 
 const SkillsForm = () => {
   const dispatch = useDispatch();

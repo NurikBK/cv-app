@@ -7,7 +7,7 @@ const Skill = ({ skill }) => {
 
  
   return (
-    <div className="skill-range" style={width}>
+    <div className="skill-range" style={width} data-testid='skill-range'>
       <h3>{skill?.name}</h3>
     </div>
   );

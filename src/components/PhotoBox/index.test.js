@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from '../../constants/theme';
 
 describe('PhotoBox', () => {
-  test('renders image with alt text', () => {
+  it('renders image with alt text', () => {
     render(
       <ThemeProvider theme={theme}>
         <PhotoBox avatar="avatar.jpg" />
@@ -15,7 +15,7 @@ describe('PhotoBox', () => {
     expect(image).toBeInTheDocument();
   });
 
-  test('renders name, sub, and text when provided', () => {
+  it('renders name, sub, and text when provided', () => {
     render(
       <ThemeProvider theme={theme}>
         <PhotoBox
@@ -34,7 +34,7 @@ describe('PhotoBox', () => {
     expect(text).toBeInTheDocument();
   });
 
-  test('does not render name, sub, or text when not provided', () => {
+  it('does not render name, sub, or text when not provided', () => {
     render(
       <ThemeProvider theme={theme}>
         <PhotoBox avatar="avatar.jpg" />

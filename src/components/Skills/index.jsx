@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSkills } from '../../features/skills/skillsSlice';
-import SkillsForm from './SkillsForm';
+import SkillsForm from './SkillForm/SkillsForm';
 import { StyledSkills } from '../styles/Skills.styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenClip } from '@fortawesome/free-solid-svg-icons';
-import Skill from './Skill';
+import Skill from './Skill/Skill';
 
 const Skills = () => {
   const dispatch = useDispatch();

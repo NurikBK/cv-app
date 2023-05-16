@@ -58,7 +58,7 @@ const Portfolio = () => {
       </div>
       <ul className="filter-container">
         <li className="filter-item ui">
-          <img src={project1Img} alt="card" />
+          <img src={project1Img} alt="card1" />
           <div className="portfolio-info">
             <h2>Space Travel</h2>
             <p>In this project I used plain HTML, CSS and JS.</p>
@@ -80,7 +80,7 @@ const Portfolio = () => {
           </div>
         </li>
         <li className="filter-item code">
-          <img src={project2Img} alt="card" />
+          <img src={project2Img} alt="card2" />
           <div className="portfolio-info">
             <h2>Some text</h2>
             <p>In this project I used React, MUI and other React libs.</p>
@@ -102,7 +102,7 @@ const Portfolio = () => {
           </div>
         </li>
         <li className="filter-item ui">
-          <img src={project3Img} alt="card" />
+          <img src={project3Img} alt="card3" />
           <div className="portfolio-info">
             <h2>EVOGYM</h2>
             <p>In this project I used React TS with Tailwind.</p>
@@ -124,7 +124,7 @@ const Portfolio = () => {
           </div>
         </li>
         <li className="filter-item code">
-          <img src={project4Img} alt="card" />
+          <img src={project4Img} alt="card4" />
           <div className="portfolio-info">
             <h2>Split Landing Page</h2>
             <p>In this project I used plain HTML, CSS and JS.</p>
