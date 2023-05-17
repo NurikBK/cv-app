@@ -10,18 +10,20 @@ import Skill from './Skill/Skill';
 const Skills = () => {
   const dispatch = useDispatch();
   const [isClicked, setIsClicked] = useState(false);
-  const data = useSelector((state) => state.skills.data);
+  let data = useSelector((state) => state.skills.data);
   const status = useSelector((state) => state.skills.status);
   const error = useSelector((state) => state.skills.error);
 
   useEffect(() => {
-    if (data.lenght === 2) {
-      dispatch(fetchSkills());
-    }
+    dispatch(fetchSkills());
   }, [dispatch]);
 
-  if (status === 'failed') {
-    return <div>Error: {error}</div>;
+  if (status === 'failed' || error) {
+    return (
+      <div className="error">
+        Something went wrong, please review your server connection
+      </div>
+    );
   }
 
   return (

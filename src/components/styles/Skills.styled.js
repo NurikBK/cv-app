@@ -41,10 +41,14 @@ export const StyledSkills = styled.div`
     background-color: ${({ theme }) => theme.colors.main};
     color: ${({ theme }) => theme.colors.secondary};
     border: none;
-  }
-
-  .btn:hover {
-    background-color: ${({ theme }) => theme.colors.accent};
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.accent};
+    }
+    &:disabled,
+    &:disabled &:hover {
+      cursor: not-allowed;
+      background-color: ${({ theme }) => theme.colors.dark};
+    }
   }
 
   .btn-open {
@@ -53,12 +57,9 @@ export const StyledSkills = styled.div`
     right: 0;
   }
 
-  .btn:disabled,
-  .btn:disabled .btn:hover {
-    cursor: not-allowed;
-    background-color: ${({ theme }) => theme.colors.dark};
+  .error {
+    color: #ff3333;
   }
-
   .skill-range {
     background-color: ${({ theme }) => theme.colors.accent};
     padding: 0.32em 1em;
@@ -97,6 +98,7 @@ export const StyledSkills = styled.div`
     width: 1px;
     background-color: ${({ theme }) => theme.colors.dark};
   }
+  
   .second::before,
   .third::before {
     left: 50%;
