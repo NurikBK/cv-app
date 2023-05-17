@@ -5,9 +5,6 @@ export const StyledTimeline = styled.div`
   max-height: 80vh;
   overflow: auto;
 
-  .error {
-    color: #ff3333;
-  }
 
   .timeline-list {
     position: relative;

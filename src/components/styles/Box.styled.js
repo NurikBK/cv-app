@@ -15,6 +15,12 @@ export const StyledBox = styled.div`
     margin-bottom: 2.5em;
   }
 
+  .error {
+    color: #ff3333;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
   @media (min-width: 1150px) {
     width: 80%;
   }

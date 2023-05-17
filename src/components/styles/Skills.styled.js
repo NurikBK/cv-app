@@ -57,9 +57,6 @@ export const StyledSkills = styled.div`
     right: 0;
   }
 
-  .error {
-    color: #ff3333;
-  }
   .skill-range {
     background-color: ${({ theme }) => theme.colors.accent};
     padding: 0.32em 1em;
