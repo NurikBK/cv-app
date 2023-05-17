@@ -42,9 +42,6 @@
       "src/**/*.{js,jsx}",
       "!src/index.js",
       "!src/App.js",
-      "!src/reportWebVitals.js",
-      "!src/redux/store.js",
-      "!src/redux/reducers.js",
       "!/node_modules/"
     ],
     "coverageThreshold": {
