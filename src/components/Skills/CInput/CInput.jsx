@@ -7,9 +7,17 @@ export const CInput = ({ label, ...props }) => {
       <label htmlFor={props.id || props.name} data-testid="label">
         {label}
       </label>
-      <input {...field} {...props} data-testid="input"/>
+      <input
+        {...field}
+        {...props}
+        id={props.id || props.name}
+        data-testid="input"
+        autocomplete
+      />
       {meta.touched && meta.error ? (
-        <p className="error" data-testid="error">{meta.error}</p>
+        <p className="error" data-testid="error">
+          {meta.error}
+        </p>
       ) : null}
     </div>
   );
