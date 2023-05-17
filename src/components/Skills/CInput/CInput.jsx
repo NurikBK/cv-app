@@ -12,7 +12,7 @@ export const CInput = ({ label, ...props }) => {
         {...props}
         id={props.id || props.name}
         data-testid="input"
-        autocomplete
+        autoComplete="true"
       />
       {meta.touched && meta.error ? (
         <p className="error" data-testid="error">
