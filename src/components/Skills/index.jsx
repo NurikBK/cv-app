@@ -15,7 +15,9 @@ const Skills = () => {
   const error = useSelector((state) => state.skills.error);
 
   useEffect(() => {
-    dispatch(fetchSkills());
+    if (data.lenght === 2) {
+      dispatch(fetchSkills());
+    }
   }, [dispatch]);
 
   if (status === 'failed') {
@@ -34,7 +36,7 @@ const Skills = () => {
         Open Edit
       </button>
       {isClicked && <SkillsForm />}
-      
+
       {data.map((item) => (
         <Skill key={item.id} skill={item} />
       ))}
