@@ -11,7 +11,7 @@ export const StyledPanel = styled.aside`
   width: ${({ width }) => width};
   flex: 1;
   img {
-    margin-bottom: ${({ width }) => (width === '54px' ? '7.9em' : 0)};
+    margin-bottom: ${({ width }) => (width === '54px' ? '6.5em' : 0)};
   }
 
   .sticky {
