@@ -15,10 +15,13 @@ const Timeline = () => {
     dispatch(fetchTimeline());
   }, [dispatch]);
 
-  if (error) {
-    return <p>{error} </p>;
+  if (status === 'failed' || error) {
+    return (
+      <div className="error">
+        Something went wrong, please review your server connection
+      </div>
+    );
   }
-
   return (
     <StyledTimeline>
       {status === 'loading' ? (
