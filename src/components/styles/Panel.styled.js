@@ -25,6 +25,7 @@ export const StyledPanel = styled.aside`
 
   button {
     margin-top: 8em;
+    margin-left: .25em;
   }
 
   li {
@@ -32,7 +33,7 @@ export const StyledPanel = styled.aside`
     display: flex;
     align-items: center;
     gap: 1.3em;
-    padding: 1.25em 0;
+    padding: 1.25em 1em;
     i,
     a {
       text-transform: capitalize;
