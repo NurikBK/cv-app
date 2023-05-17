@@ -15,8 +15,10 @@ const Skills = () => {
   const error = useSelector((state) => state.skills.error);
 
   useEffect(() => {
-    dispatch(fetchSkills());
-  }, [dispatch]);
+    if (data.length < 2) {
+      dispatch(fetchSkills());
+    }
+  }, [dispatch, data]);
 
   if (status === 'failed' || error) {
     return (

@@ -10,10 +10,12 @@ const Timeline = () => {
   const data = useSelector((state) => state.timeline.timeline);
   const status = useSelector((state) => state.timeline.status);
   const error = useSelector((state) => state.timeline.error);
-
+ 
   useEffect(() => {
-    dispatch(fetchTimeline());
-  }, [dispatch]);
+    if (data.length < 3 ) {
+      dispatch(fetchTimeline());
+    }
+  }, [dispatch, data]);
 
   if (status === 'failed' || error) {
     return (
