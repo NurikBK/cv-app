@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchTimeline } from '../../features/timeline/timelineSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotate } from '@fortawesome/free-solid-svg-icons';
-import { Fade, Slide } from 'react-awesome-reveal';
+import { Slide } from 'react-awesome-reveal';
 
 const Timeline = () => {
   const dispatch = useDispatch();
