@@ -6,6 +6,7 @@ import { StyledSkills } from '../styles/Skills.styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenClip } from '@fortawesome/free-solid-svg-icons';
 import Skill from './Skill/Skill';
+import { Fade } from 'react-awesome-reveal';
 
 const Skills = () => {
   const dispatch = useDispatch();
@@ -39,10 +40,16 @@ const Skills = () => {
         </i>
         Open Edit
       </button>
-      {isClicked && <SkillsForm />}
+      {isClicked && (
+        <Fade triggerOnce={true}>
+          <SkillsForm />
+        </Fade>
+      )}
 
       {data.map((item) => (
-        <Skill key={item.id} skill={item} />
+        <Fade triggerOnce={true} key={item.id}>
+          <Skill skill={item} />
+        </Fade>
       ))}
       <div className="skills-grade">
         <p className="grade first">Beginner</p>

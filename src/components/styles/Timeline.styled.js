@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const StyledTimeline = styled.div`
   min-height: 30vh;
   max-height: 80vh;
-  overflow: auto;
-
+  overflow-x: hidden;
 
   .timeline-list {
     position: relative;

@@ -4,15 +4,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchTimeline } from '../../features/timeline/timelineSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotate } from '@fortawesome/free-solid-svg-icons';
+import { Fade, Slide } from 'react-awesome-reveal';
 
 const Timeline = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.timeline.timeline);
   const status = useSelector((state) => state.timeline.status);
   const error = useSelector((state) => state.timeline.error);
- 
+
   useEffect(() => {
-    if (data.length < 3 ) {
+    if (data.length < 3) {
       dispatch(fetchTimeline());
     }
   }, [dispatch, data]);
@@ -31,19 +32,21 @@ const Timeline = () => {
           <FontAwesomeIcon icon={faRotate} className="rotate" />
         </div>
       ) : (
-        <ul className="timeline-list">
-          {data.map((item) => (
-            <li key={item?.id}>
-              <div className="timeline-date">{item?.date}</div>
-              <div className="general-event timeline-event">
-                <div className="info">
-                  <h3>{item?.title}</h3>
-                  <p>{item?.text}</p>
+        <Slide direction="right" triggerOnce={true} cascade={true}>
+          <ul className="timeline-list">
+            {data.map((item) => (
+              <li key={item?.id}>
+                <div className="timeline-date">{item?.date}</div>
+                <div className="general-event timeline-event">
+                  <div className="info">
+                    <h3>{item?.title}</h3>
+                    <p>{item?.text}</p>
+                  </div>
                 </div>
-              </div>
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
+        </Slide>
       )}
     </StyledTimeline>
   );
