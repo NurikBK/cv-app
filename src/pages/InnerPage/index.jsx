@@ -12,6 +12,8 @@ import { HashLink } from 'react-router-hash-link';
 import { Container } from '../../components/styles/Container.styled';
 import { expertiseData } from '../../constants/expertiseData';
 import { feedbackData } from '../../constants/feedbacksData';
+import { timelineData } from '../../constants/timelineData';
+import { skillsData } from '../../constants/skillsData';
 import Skills from '../../components/Skills';
 import { Fade } from 'react-awesome-reveal';
 
@@ -52,7 +54,7 @@ const InnerPage = () => {
           </Fade>
         </Box>
         <Box title="Education" id="education">
-          <Timeline />
+          <Timeline data={timelineData} />
         </Box>
         <Box title="Experience" id="experience">
           <Fade cascade={true} triggerOnce={true}>
@@ -60,7 +62,7 @@ const InnerPage = () => {
           </Fade>
         </Box>
         <Box title="Skills" id="skills">
-          <Skills />
+          <Skills data={skillsData} />
         </Box>
         <Box title="Portfolio" id="portfolio">
           <Fade cascade={true} triggerOnce={true}>
