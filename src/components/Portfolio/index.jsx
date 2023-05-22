@@ -70,13 +70,13 @@ const Portfolio = () => {
               Demo
             </a>
             <br />
-            <a
+            {/* <a
               href="https://github.com/NurikBK/space-travel-site"
               target="_blank"
               rel="noreferrer"
             >
               View source
-            </a>
+            </a> */}
           </div>
         </li>
         <li className="filter-item code">
@@ -92,13 +92,13 @@ const Portfolio = () => {
               Demo
             </a>
             <br />
-            <a
+            {/* <a
               href="https://github.com/NurikBK/Admin-dashboard"
               target="_blank"
               rel="noreferrer"
             >
               View source
-            </a>
+            </a> */}
           </div>
         </li>
         <li className="filter-item ui">
@@ -114,13 +114,13 @@ const Portfolio = () => {
               Demo
             </a>
             <br />
-            <a
+            {/* <a
               href="https://github.com/NurikBK/fitness-web-app"
               target="_blank"
               rel="noreferrer"
             >
               View source
-            </a>
+            </a> */}
           </div>
         </li>
         <li className="filter-item code">
@@ -136,13 +136,13 @@ const Portfolio = () => {
               Demo
             </a>
             <br />
-            <a
+            {/* <a
               href="https://github.com/NurikBK/split-landing-page"
               target="_blank"
               rel="noreferrer"
             >
               View source
-            </a>
+            </a> */}
           </div>
         </li>
       </ul>
